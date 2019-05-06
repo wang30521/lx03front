@@ -7,7 +7,7 @@ var app = new Vue({
     },
     mounted(){
         console.log('view nounted');
-        this.getTest();
+        this.getTests();
     },
     methods:{
         handleEdit(){
