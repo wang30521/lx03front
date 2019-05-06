@@ -3,7 +3,7 @@ var app = new Vue({
     data: {
         pageInfo:'',
         pageNum: 1,
-        precipitation:''
+        testName:''
     },
     mounted(){
         console.log('view nounted');
@@ -15,6 +15,10 @@ var app = new Vue({
         },
         handleDelete(){
             console.log('delete click');
+        },
+        hrefCreateClick(){
+            console.log('create click');
+            location.href="TestCreate.html";
         },
         handleCurrentChange(val){
             console.log(val);
@@ -30,7 +34,7 @@ var app = new Vue({
             axios.get('http://localhost:8080/test/getWithPageAndName', {
                 params: {
                     pageNum: this.pageNum,
-                    precipitation: this.precipitation
+                    testName: this.testName
                 }
             })
                 .then(function (response) {

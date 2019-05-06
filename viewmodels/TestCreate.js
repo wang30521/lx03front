@@ -1,6 +1,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        testName:'',
         precipitation:'',
         testTime:'',
         tester:'',
@@ -41,6 +42,7 @@ var app = new Vue({
         },
         createTest() {
             axios.post('http://localhost:8080/test/create', {
+                testName: this.testName,
                 precipitation: this.precipitation,
                 testTime: this.testTime,
                 tester: this.tester,

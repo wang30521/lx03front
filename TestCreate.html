@@ -11,8 +11,9 @@
 
 <body>
     <div id="app">
+            <el-input v-model="testName" placeholder="请输入详细地址"></el-input>
             <el-input v-model="precipitation" placeholder="请输入降雨量"></el-input>
-            <el-input v-model="testTime" placeholder="请输入时间" type="password"></el-input>
+            <el-input v-model="testTime" placeholder="请输入时间"></el-input>
             <el-input v-model="tester" placeholder="请输入测试人员"></el-input>
             <el-cascader placeholder="请选择地址" :options="areas" v-model="selectedAreas" @change="handleAreaChange">
             </el-cascader>
