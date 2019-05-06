@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/elementui.css">
+    <title>Demo</title>
+</head>
+
+<body>
+    <div id="app">
+            <el-input v-model="precipitation" placeholder="请输入降雨量"></el-input>
+            <el-input v-model="testTime" placeholder="请输入时间" type="password"></el-input>
+            <el-input v-model="tester" placeholder="请输入测试人员"></el-input>
+            <el-cascader placeholder="请选择地址" :options="areas" v-model="selectedAreas" @change="handleAreaChange">
+            </el-cascader>
+            <br>
+            <br>
+            <el-button type="primary" @click="handleCreate">创建</el-button>
+    </div>
+
+    <script src="assets/js/axios.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/vue.js"></script>
+    <script src="assets/js/elementui.js"></script>
+    <script src="viewmodels/TestCreate.js"></script>
+
+</body>
+
+</html>
